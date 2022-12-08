@@ -11,13 +11,11 @@ public class SFXSpawner : MonoBehaviour
     {
         GameObject sfxObject = new GameObject("2DSoundEffect");
         AudioSource newSource = sfxObject.AddComponent<AudioSource>();
-        SFXData newSourceData = data;
 
-        newSource.spatialBlend = 1;
-        if (newSourceData.Type != 0)
-        {
-            newSource.playOnAwake = false;
-        }
+        newSource.volume = data.Volume;
+        newSource.pitch = data.Pitch;
+        newSource.minDistance = data.MinDistance;
+        newSource.maxDistance = data.MaxDistance;
 
         newSource.Play();
         if(data.Looping == false)

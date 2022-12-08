@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f3b71b96616614b92babe077cac789, type: 3}
   m_Name: SFXData_Victory
   m_EditorClassIdentifier: 
-  sFX: {fileID: 0}
+  sFX: {fileID: 8300000, guid: 2512791af04d76d4ea3afabaf1b02c4e, type: 3}
   type: 4
-  _volume: 1
-  _pitch: 1
+  volume: 1
+  pitch: 1
   isLooping: 0
   minDistance: 1
   maxDistance: 300
