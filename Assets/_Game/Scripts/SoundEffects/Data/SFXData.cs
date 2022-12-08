@@ -16,11 +16,11 @@ public class SFXData : ScriptableObject
 
     [Tooltip("Adjust the sound's volume, from muted to maximum volume.")]
     [Range(0, 1)]
-    [SerializeField] private float _volume;
+    [SerializeField] private float _volume = 1;
 
     [Tooltip("Adjust the sound's pitch. This will speed up or slow down the audio.")]
     [Range(-3, 3)]
-    [SerializeField] private float _pitch;
+    [SerializeField] private float _pitch = 1;
 
     [Tooltip("Will this sound effect loop after playing? Or will it end after playing once?")]
     [SerializeField] private bool isLooping;
@@ -38,6 +38,11 @@ public class SFXData : ScriptableObject
 
     #region Get Functions
     public SFXType Type => type;
+
+    public AudioClip SFX => sFX;
+
+    public Transform SpawnObject => spawnObject;
+
     public bool Looping => isLooping;
     #endregion
 }

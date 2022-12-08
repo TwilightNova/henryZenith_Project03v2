@@ -2,18 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
 public class SFXSpawner : MonoBehaviour
 {
-    private AudioSource source;
+    [Tooltip("Pass in a Scriptable Object.")]
     [SerializeField] private SFXData data;
 
-    private void Awake()
+    public AudioSource PlayClip2D()
     {
-        source.spatialBlend = 1;
-        if(data.Type != 0)
+        GameObject sfxObject = new GameObject("2DSoundEffect");
+        AudioSource newSource = sfxObject.AddComponent<AudioSource>();
+        SFXData newSourceData = data;
+
+        newSource.spatialBlend = 1;
+        if (newSourceData.Type != 0)
         {
-            source.playOnAwake = false;
+            newSource.playOnAwake = false;
         }
+
+        newSource.Play();
+        if(data.Looping == false)
+        {
+            Object.Destroy(sfxObject, data.SFX.length);
+        }
+        return newSource;
     }
+
 }
