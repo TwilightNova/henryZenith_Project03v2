@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum SFXType
 {
-    Collectible = 0,
+    Collectable = 0,
     Collection,
     Hurt,
     EnemyDeath,

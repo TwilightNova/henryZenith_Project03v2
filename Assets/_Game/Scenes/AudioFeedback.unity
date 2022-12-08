@@ -506,7 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
   _volume: 1
-  _pitch: 0
+  _pitch: 1
 --- !u!82 &1352422276
 AudioSource:
   m_ObjectHideFlags: 0
