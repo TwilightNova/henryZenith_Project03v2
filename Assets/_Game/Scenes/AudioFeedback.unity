@@ -395,7 +395,7 @@ GameObject:
   - component: {fileID: 279866800}
   - component: {fileID: 279866801}
   m_Layer: 0
-  m_Name: SFX_Collectible
+  m_Name: SFX_Collectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -506,7 +506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clip: {fileID: 0}
   _volume: 1
-  _pitch: 0
+  _pitch: 1
 --- !u!82 &1352422276
 AudioSource:
   m_ObjectHideFlags: 0
